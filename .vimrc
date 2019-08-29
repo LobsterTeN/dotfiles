@@ -23,7 +23,8 @@ autocmd vimenter * syntax on
   call dein#add('tomasr/molokai')
   call dein#add('scrooloose/nerdtree')
   call dein#add('rhysd/accelerated-jk')
-if dein#check_install()
+  call dein#add('junegunn/fzf.vim')
+  if dein#check_install()
   call dein#install()
 endif
 
@@ -111,3 +112,16 @@ function! s:GetHighlight(hi)
   let hl = substitute(hl, 'xxx', '', '')
   return hl
 endfunction
+
+" fzf config
+nnoremap <C-p> :FZFFileList<CR>
+
+if has("win64")
+    command! FZFFileList call fzf#run(fzf#wrap({
+                \ 'source': 'where /r . *',
+                \ 'down': '40%'}))
+else
+    command! FZFFileList call fzf#run(fzf#wrap({
+                \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store',
+                \ 'down': '40%'}))
+endif
