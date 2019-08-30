@@ -24,6 +24,7 @@ autocmd vimenter * syntax on
   call dein#add('scrooloose/nerdtree')
   call dein#add('rhysd/accelerated-jk')
   call dein#add('junegunn/fzf.vim')
+  call dein#add('junegunn/fzf',{'build':'./install --all'})
   if dein#check_install()
   call dein#install()
 endif
