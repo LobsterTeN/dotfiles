@@ -25,6 +25,7 @@ autocmd vimenter * syntax on
   call dein#add('rhysd/accelerated-jk')
   call dein#add('junegunn/fzf.vim')
   call dein#add('junegunn/fzf',{'build':'./install --all'})
+  call dein#add('itchyny/lightline.vim')
   if dein#check_install()
   call dein#install()
 endif
@@ -83,37 +84,6 @@ imap ( ()<LEFT>
 " カーソルを行頭、行末で止まらないようにする
 set whichwrap=b,s,h,l,<,>,[,]
 
-" 挿入モード時、ステータスラインの色を変更
-let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
-
-if has('syntax')
-  augroup InsertHook
-    autocmd!
-    autocmd InsertEnter * call s:StatusLine('Enter')
-    autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
-
-let s:slhlcmd = ''
-function! s:StatusLine(mode)
-  if a:mode == 'Enter'
-    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-    silent exec g:hi_insert
-  else
-    highlight clear StatusLine
-    silent exec s:slhlcmd
-  endif
-endfunction
-
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
-endfunction
-
 " fzf config
 nnoremap <C-p> :FZFFileList<CR>
 
@@ -126,3 +96,9 @@ else
                 \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store',
                 \ 'down': '40%'}))
 endif
+
+" lightline
+set t_Co=256
+let g:lightline = {
+      \ 'colorscheme': 'wombat'
+      \ }
