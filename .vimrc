@@ -29,6 +29,7 @@ autocmd vimenter * syntax on
   call dein#add('tpope/vim-fugitive')
   call dein#add('vim-airline/vim-airline')
   call dein#add('airblade/vim-gitgutter')
+  call dein#add('twitvim/twitvim')
   if dein#check_install()
   call dein#install()
 endif
