@@ -26,6 +26,9 @@ autocmd vimenter * syntax on
   call dein#add('junegunn/fzf.vim')
   call dein#add('junegunn/fzf',{'build':'./install --all'})
   call dein#add('itchyny/lightline.vim')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('airblade/vim-gitgutter')
   if dein#check_install()
   call dein#install()
 endif
