@@ -27,6 +27,9 @@ autocmd vimenter * syntax on
   call dein#add('vim-airline/vim-airline')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('twitvim/twitvim')
+  call dein#add('rbtnn/game_engine.vim')
+  call dein#add('rbtnn/puyo.vim')
+  call dein#add('rbtnn/mario.vim')
   if dein#check_install()
   call dein#install()
 endif
