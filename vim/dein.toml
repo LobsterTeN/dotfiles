@@ -17,6 +17,9 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'rbtnn/game_engine.vim'
 
+[[plugins]]
+repo = 'twitvim/twitvim'
+
 ###fzf
 [[plugins]]
 repo = 'junegunn/fzf'

@@ -3,10 +3,6 @@
 repo = 'scrooloose/nerdtree'
 on_cmd = ['NERDTree']
 
-[[plugins]]
-repo = 'twitvim/twitvim'
-on_cmd = ['SetLoginTwitter']
-
 [[plugin]]
 repo =['rhysd/accelerated-jk']
 on_cmd = ['QuickRun']
