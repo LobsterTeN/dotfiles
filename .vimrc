@@ -17,19 +17,12 @@ endif
 
 autocmd vimenter * syntax on
   call dein#begin(s:dein_dir)
+  let g:rc_dir    = expand('~/dotfiles/vim/')
   call dein#add('tomasr/molokai')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('rhysd/accelerated-jk')
-  call dein#add('junegunn/fzf.vim')
-  call dein#add('junegunn/fzf',{'build':'./install --all'})
-  call dein#add('itchyny/lightline.vim')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('airblade/vim-gitgutter')
-  call dein#add('twitvim/twitvim')
-  call dein#add('rbtnn/game_engine.vim')
-  call dein#add('rbtnn/puyo.vim')
-  call dein#add('rbtnn/mario.vim')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
   if dein#check_install()
   call dein#install()
 endif

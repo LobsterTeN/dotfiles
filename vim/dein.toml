@@ -1,0 +1,30 @@
+### カラースキーム
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'rbtnn/game_engine.vim'
+
+###fzf
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+
+###fzf.vim
+[[plugins]]
+repo = 'junegunn/fzf.vim'

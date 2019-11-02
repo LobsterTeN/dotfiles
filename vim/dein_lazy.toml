@@ -1,0 +1,16 @@
+### nerdtree
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+on_cmd = ['NERDTree']
+
+[[plugins]]
+repo = 'twitvim/twitvim'
+on_cmd = ['SetLoginTwitter']
+
+[[plugins]]
+repo = 'rbtnn/puyo.vim'
+on_cmd = ['Puyo']
+
+[[plugins]]
+repo = 'rbtnn/mario.vim'
+on_cmd = ['Mario']
