@@ -3,9 +3,6 @@
 repo = 'tomasr/molokai'
 
 [[plugins]]
-repo = 'rhysd/accelerated-jk'
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
