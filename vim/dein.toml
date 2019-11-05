@@ -28,3 +28,9 @@ build = './install --all'
 ###fzf.vim
 [[plugins]]
 repo = 'junegunn/fzf.vim'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[pluigins]]
+repo = 'rhysd/accelerated-jk'
