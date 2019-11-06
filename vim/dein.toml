@@ -9,10 +9,10 @@ repo = 'itchyny/lightline.vim'
 repo = 'vim-airline/vim-airline'
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
+repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'airblade/vim-gitgutter'
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'rbtnn/game_engine.vim'
@@ -31,6 +31,3 @@ repo = 'junegunn/fzf.vim'
 
 [[plugins]]
 repo = 'w0rp/ale'
-
-[[pluigins]]
-repo = 'rhysd/accelerated-jk'

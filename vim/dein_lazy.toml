@@ -3,11 +3,6 @@
 repo = 'scrooloose/nerdtree'
 on_cmd = ['NERDTree']
 
-[[plugin]]
-repo ='rhysd/accelerated-jk'
-on_map = {n = '<Plug>'}
-hook_add = 'source ~/dotfiles/vim/accelerated_jk.lvim'
-
 [[plugins]]
 repo = 'rbtnn/puyo.vim'
 on_cmd = ['Puyo']
@@ -15,3 +10,11 @@ on_cmd = ['Puyo']
 [[plugins]]
 repo = 'rbtnn/mario.vim'
 on_cmd = ['Mario']
+
+[[plugins]]
+repo = 'rhysd/accelerated-jk'
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap <silent>j <Plug>(accelerated_jk_gj)
+  nmap <silent>k <Plug>(accelerated_jk_gk)
+'''
